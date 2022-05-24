@@ -116,4 +116,4 @@ exp/json
 tmp_*/
 example/res/
 data/
-# *.mp4
+*.mp4
