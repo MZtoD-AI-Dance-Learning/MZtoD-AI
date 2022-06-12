@@ -110,10 +110,10 @@ exp/json/test_kpt.json
 exp/json/test_gt_kpt.json
 exp/json/validate_rcnn_kpt.json
 exp/json/validate_gt_kpt.json
-data/
+#data/
 tmp/
 exp/json
 tmp_*/
 example/res/
-data/
+#data/
 *.mp4

@@ -60,10 +60,10 @@ def get_inference(file_path: str='user_LoveDive_0.mp4'):
     s3_client.download_file(AWS_S3_BUCKET_NAME, file_path, video_path)
 
     # run pose estimation using AlphaPose
-    pose_inference = f"python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml \
+    pose_inference = f"python3 scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml \
                         --checkpoint pretrained_models/fast_res50_256x192.pth --video {video_path} --save_video --vis_fast \
                         --outdir ./input/result"
-    subprocess.call(pose_inference)
+    subprocess.call(pose_inference, shell=True)
 
     os.rename(f"./input/result/alphapose-results.json", user_result_path)
 
